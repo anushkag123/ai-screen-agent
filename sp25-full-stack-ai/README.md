@@ -1,6 +1,6 @@
-# AI Screen Assistant Workshop
+# AI Screen Assistant
 
-This project is a workshop app that turns a desktop overlay into a simple AI assistant. It can:
+This project is an app that turns a desktop overlay into a simple AI assistant. It can:
 
 - capture your screen
 - answer questions about what is visible
@@ -62,7 +62,7 @@ python3 --version
 ## 2. Clone and Enter the Project
 
 ```bash
-git clone https://github.com/TxConvergentAdmin/sp25-full-stack-ai.git
+git clone 
 cd sp25-full-stack-ai
 ```
 
@@ -173,28 +173,6 @@ At a high level, the app works like this:
 - [assistant/overlay/index.html](/Users/spotta/Desktop/Projects/workshop-cluely/assistant/overlay/index.html)
   The simple frontend for the floating overlay.
 
-### Helper Modules For Later Workshop Stages
-
-- [assistant/helpers/chat.py](/Users/spotta/Desktop/Projects/workshop-cluely/assistant/helpers/chat.py)
-  Lightweight text-only Groq chat helper for things like question classification.
-
-- [assistant/helpers/rag.py](/Users/spotta/Desktop/Projects/workshop-cluely/assistant/helpers/rag.py)
-  Document indexing and retrieval helpers for RAG over PDFs and notes.
-
-- [assistant/helpers/mcp_tools.py](/Users/spotta/Desktop/Projects/workshop-cluely/assistant/helpers/mcp_tools.py)
-  Tool definitions and execution logic for reminder creation and note saving.
-
-- [assistant/helpers/__init__.py](/Users/spotta/Desktop/Projects/workshop-cluely/assistant/helpers/__init__.py)
-  Re-exports helper functions used in later workshop stages.
-
-### Workshop Materials
-
-- [WORKSHOP_PLAN.md](/Users/spotta/Desktop/Projects/workshop-cluely/WORKSHOP_PLAN.md)
-  The teaching outline and stage-by-stage workshop plan.
-
-- [AI_CONTEXT.md](/Users/spotta/Desktop/Projects/workshop-cluely/AI_CONTEXT.md)
-  Supporting workshop context and notes.
-
 ### Output / Workspace Folders
 
 - `notes/`
@@ -205,29 +183,6 @@ At a high level, the app works like this:
 
 - `.chroma_db/`
   Created if you use the RAG extension.
-
-## 10. Current Functionality vs Workshop Extensions
-
-### What works in the starter app now
-
-- screen capture
-- vision-based answers
-- keyword-based routing to web search
-- voice recording and transcription
-- floating desktop overlay UI
-
-### What the full solution supports
-
-The completed solution in `assistant/solution_agent.py` adds:
-
-- LLM-based question classification
-- conversation memory
-- document retrieval with RAG
-- tool calls for actions like reminders and notes
-
-Note:
-
-`main.py` currently imports `ScreenAssistantAgent` from `assistant/agent.py`, which is the workshop starter version. If you want the running app to use the completed implementation, switch the import to `assistant.solution_agent`.
 
 ## 11. Example Questions To Try
 
@@ -248,7 +203,7 @@ Voice:
 
 ## 12. Run Tests
 
-The repo includes tests for the completed solution agent:
+The repo includes tests for the completed agent:
 
 ```bash
 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test*.py' -v
@@ -271,16 +226,3 @@ Grant microphone permission and make sure your default input device is available
 ### `ModuleNotFoundError`
 
 Make sure your virtual environment is activated and the dependencies were installed with `pip install ...`.
-
-## 14. Workshop Progression
-
-This repository is designed to teach a progression:
-
-1. Vision
-2. Web search
-3. Smarter routing
-4. Memory
-5. RAG
-6. Tool use
-
-The starter code lives in `assistant/agent.py`, and the reference answer lives in `assistant/solution_agent.py`.
