@@ -62,7 +62,7 @@ python3 --version
 ## 2. Clone and Enter the Project
 
 ```bash
-git clone 
+git clone https://github.com/anushkag123/ai-screen-agent.git
 cd sp25-full-stack-ai
 ```
 
